@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -20,15 +21,17 @@ import javafx.stage.Stage;
  *
  * @author ElarbiMohamedAymen
  */
-public class Main extends Application {  
+public class Main extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/CalculeMoyenne.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+        stage.getIcons().add(new Image("/GUI/IcoPaper.png"));
         stage.setScene(scene);
         stage.show();
+
     }
 
     /**
@@ -36,9 +39,7 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        
 
-        
     }
-    
+
 }
